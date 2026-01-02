@@ -25,7 +25,7 @@ export default function RootLayout({
             <main className="bg-page">
               <ClientLayout>{children}</ClientLayout>
             </main>
-            {/* <Footer /> */}
+            <Footer />
           </FilterProvider>
         </div>
       </body>
