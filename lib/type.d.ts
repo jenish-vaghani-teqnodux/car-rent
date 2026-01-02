@@ -1,0 +1,57 @@
+interface IGetData {
+  categoryTypes: {
+    id: number;
+    label: string;
+    value: string;
+    count: number;
+  }[];
+  carCapacityOptions: {
+    id: number;
+    label: string;
+    value: string;
+    count: number;
+  }[];
+}
+
+interface slots {
+  id: string;
+  title: string;
+  content: string;
+  image_url: string;
+  flip: boolean;
+}
+
+interface carDetails {
+  id: string;
+  title: string;
+  category: string;
+  user_liked: boolean;
+  image_url: string;
+  fuelCapacity: string;
+  transmission: string;
+  seats: number;
+  price: number;
+  originalPrice?: number;
+  flip: boolean;
+  views?: string[];
+}
+
+interface IDashboardData {
+  slots: slots[];
+  locationOptions: {
+    label: string;
+    value: string;
+  }[];
+  popular_car: carDetails[];
+  recomendation_car: carDetails[];
+  pickup: {
+    location: string;
+    date: string;
+    time: string;
+  };
+  dropoff: {
+    location: string;
+    date: string;
+    time: string;
+  };
+}
