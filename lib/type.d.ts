@@ -55,3 +55,15 @@ interface IDashboardData {
     time: string;
   };
 }
+
+interface IDetails {
+  reviews: {
+    id: string;
+    name: string;
+    role: string;
+    profileImage: string;
+    reviewDate: string;
+    rating: number;
+    reviewText: string;
+  }[];
+}

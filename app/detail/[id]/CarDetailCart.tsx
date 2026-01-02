@@ -13,7 +13,7 @@ const CarDetailCart = () => {
     <>
       <div className="bg-card rounded-xl px-4 py-6 flex flex-col justify-between h-full w-full">
         {/* carname, like-button, rating */}
-        <div className="space-y-12">
+        <div className="space-y-6 sm:space-y-12">
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <h1 className="text-[16px] sm:text-xl font-bold text-heading">
@@ -26,13 +26,13 @@ const CarDetailCart = () => {
               />
             </div>
             <div className="flex items-center gap-2">
-              <RatingStar className="" />
+              <RatingStar size="small" />
               <span className="text-sm text-secondary">440+ Reviewer</span>
             </div>
           </div>
           {/* description */}
-          <div className="">
-            <span className="text-[18px] text-secondary">
+          <div className="mb-6 ">
+            <span className="text-sm md:text-[18px] text-secondary ">
               NISMO has become the embodiment of Nissan's outstanding
               performance, inspired by the most unforgiving proving ground, the
               "race track".
@@ -40,32 +40,40 @@ const CarDetailCart = () => {
           </div>
         </div>
         {/* car detail */}
-        <div className="space-y-12">
-          <div className="flex justify-between gap-8">
+        <div className="space-y-6 sm:space-y-12">
+          <div className="flex flex-wrap justify-between gap-2 md:gap-8">
             <div className="flex-1 space-y-2">
               <p className="flex justify-between">
-                <label className="text-[18px] text-muted">Type Car</label>
-                <span className="text-[18px] font-semibold text-secondary">
+                <label className="text-sm  md:text-[18px] text-muted">
+                  Type Car
+                </label>
+                <span className="text-sm md:text-[18px] font-semibold text-secondary">
                   Sport
                 </span>
               </p>
               <p className="flex justify-between">
-                <label className="text-[18px] text-muted">Steering</label>
-                <span className="text-[18px] font-semibold text-secondary">
+                <label className="text-sm md:text-[18px] text-muted">
+                  Steering
+                </label>
+                <span className="text-sm md:text-[18px] font-semibold text-secondary">
                   Manual
                 </span>
               </p>
             </div>
             <div className="flex-1 space-y-2">
               <p className="flex justify-between">
-                <label className="text-[18px] text-muted">Capacity</label>
-                <span className="text-[18px] font-semibold text-secondary">
+                <label className="text-sm md:text-[18px] text-muted">
+                  Capacity
+                </label>
+                <span className="text-sm md:text-[18px] font-semibold text-secondary">
                   2 Person
                 </span>
               </p>
               <p className="flex justify-between">
-                <label className="text-[18px] text-muted">Gasoline</label>
-                <span className="text-[18px] font-semibold text-secondary">
+                <label className="text-sm md:text-[18px] text-muted">
+                  Gasoline
+                </label>
+                <span className="text-sm md:text-[18px] font-semibold text-secondary">
                   70L
                 </span>
               </p>

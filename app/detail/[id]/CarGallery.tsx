@@ -18,18 +18,39 @@ const views = [
   "/images/f6b2b828-a5c8-4925-8a7a-065aff9535c6-view-3.png",
 ];
 
-const CarGallery = () => {
+const CarGallery: React.FC<ICarGalleryProps> = ({ isLoading }) => {
   return (
     <>
-      <SlotBanner2 {...demoDetail} />
-      <div className="flex justify-center gap-5 pt-6 overflow-x-auto">
-        {views.map((item, index) => (
-          <img
-            src={item || "/images/no-image-available.png"}
-            key={index}
-            className="w-[148px] h-[124px] rounded-lg"
-          />
-        ))}
+      {/* Main Banner */}
+      <SlotBanner2 {...demoDetail} isLoading={isLoading} />
+
+      {/* Thumbnails */}
+      <div className="flex gap-5 pt-4 overflow-x-auto pb-4">
+        {isLoading
+          ? Array.from({ length: 3 }).map((_, index) => (
+              <div
+                key={index}
+                className="shrink-0 w-24 h-16 sm:w-[148px] sm:h-[124px] rounded-lg bg-white flex items-center justify-center"
+              >
+                <img
+                  src="/assets/skeleton/gallery.svg"
+                  alt="loading-thumbnail"
+                  className="w-6 h-6 object-contain rounded-lg"
+                />
+              </div>
+            ))
+          : views.map((item, index) => (
+              <div
+                key={index}
+                className="shrink-0 w-24 h-16 sm:w-[148px] sm:h-[124px] rounded-lg flex items-center justify-center"
+              >
+                <img
+                  src={item || "/images/no-image-available.png"}
+                  alt={`car-view-${index}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+            ))}
       </div>
     </>
   );

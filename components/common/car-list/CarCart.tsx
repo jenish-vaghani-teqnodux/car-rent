@@ -26,7 +26,7 @@ const CarCart: React.FC<ICarCartProps> = ({
 
   return (
     <div
-      className={`bg-card rounded-xl p-4 sm:p-6 ${
+      className={`bg-card rounded-xl p-4 mb-1 sm:p-6 ${
         varient === "detailed" ? "w-[327px] h-60 " : "w-60  h-[286px]"
       } sm:w-[304px] sm:h-[388px]`}
     >
@@ -107,7 +107,7 @@ const CarCart: React.FC<ICarCartProps> = ({
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4 sm:mt-6">
+          <div className="flex items-center justify-between mt-2 sm:mt-6">
             {/* Price and Original Price */}
             <div>
               <p className="text-heading text-[16px] sm:text-xl font-bold">

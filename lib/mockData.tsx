@@ -260,3 +260,28 @@ export const dashboardData: IDashboardData = {
     time: "01:00 AM",
   },
 };
+
+export const details: IDetails = {
+  reviews: [
+    {
+      id: "67a8d37e-305d-4134-865f-31c50b5a5338",
+      name: "Alex Stanton",
+      role: "CEO at Bukalapak",
+      profileImage: "/images/profile.png",
+      reviewDate: "21 July 2022",
+      rating: 4,
+      reviewText:
+        "We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+    },
+    {
+      id: "77598852-e172-41f6-9f6c-88942a8e3886",
+      name: "Skylar Dias",
+      role: "CEO at Amazon",
+      profileImage: "/images/skylar_dias_profile.png",
+      reviewDate: "20 July 2022",
+      rating: 4,
+      reviewText:
+        "We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.",
+    },
+  ],
+};

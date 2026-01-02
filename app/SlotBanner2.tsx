@@ -40,7 +40,7 @@ const SlotBanner2: React.FC<ISlotBannerProps> = ({
           </svg>
 
           <div className="min-w-[250px] sm:w-[272px] space-y-4 relative z-10">
-            <h2 className="text-lg sm:text-3xl text-white font-semibold">
+            <h2 className="text-lg sm:text-xl md:text-3xl text-white font-semibold">
               {title || ""}
             </h2>
 
@@ -57,7 +57,7 @@ const SlotBanner2: React.FC<ISlotBannerProps> = ({
 
           <img
             src={image_url}
-            className={`absolute -right-1 sm:right-20 -bottom-6 w-[406px] h-40 sm:h-60 object-contain z-5 ${
+            className={`absolute -right-1 xl:right-20 -bottom-6 w-[406px] h-40 sm:h-60 object-contain z-5 ${
               flip ? "scale-x-[-1]" : "scale-x-100"
             }`}
           />
