@@ -10,6 +10,7 @@ const SlotBanner1: React.FC<ISlotBannerProps> = ({
   flip,
   showButton = false,
 }) => {
+  const handleClickRental = () => {};
   return (
     <>
       {isLoading ? (
@@ -63,7 +64,10 @@ const SlotBanner1: React.FC<ISlotBannerProps> = ({
                 "Providing cheap car rental services and safe and comfortable facilities."}
             </span>
             {showButton && (
-              <button className="btn-primary h-11 w-[120px] text-white size-[18px] font-medium rounded-md cursor-pointer mt-4">
+              <button
+                className="btn-primary h-11 w-[120px] text-white size-[18px] font-medium rounded-md cursor-pointer mt-4"
+                onClick={handleClickRental}
+              >
                 Rental Car
               </button>
             )}

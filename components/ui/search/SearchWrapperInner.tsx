@@ -3,6 +3,7 @@
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import { useFilter } from "@/context/FilterContext";
+import { usePathname } from "next/navigation";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -43,6 +44,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const SearchWrapperInner: React.FC<SearchWrapperProps> = ({
   placeholder = "Search",
 }) => {
+  const pathname = usePathname();
+  const showFilter = pathname === "/";
   const { toggleFilter } = useFilter();
   return (
     <Search className="flex border-2 px-2 border-devider hover:border-[#A9B9D2]! rounded-4xl h-11">
@@ -55,13 +58,15 @@ const SearchWrapperInner: React.FC<SearchWrapperProps> = ({
         placeholder={placeholder || "Search"}
         inputProps={{ "aria-label": "search" }}
       />
-      <FilterIconWrapper>
-        <img
-          src="/assets/icons/filter.svg"
-          className="w-6 h-6"
-          onClick={toggleFilter}
-        />
-      </FilterIconWrapper>
+      {showFilter && (
+        <FilterIconWrapper>
+          <img
+            src="/assets/icons/filter.svg"
+            className="w-6 h-6"
+            onClick={toggleFilter}
+          />
+        </FilterIconWrapper>
+      )}
     </Search>
   );
 };

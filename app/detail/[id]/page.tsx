@@ -12,7 +12,7 @@ const DetailPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   return (
     <>
-      <div className="p-4 lg:p-8 w-full space-y-6">
+      <div className="p-4 lg:p-8 w-full space-y-6 overflow-y-auto">
         <div className="flex flex-col sm:flex-row gap-4  md:gap-6">
           {/* car gallery */}
           <div
@@ -20,12 +20,15 @@ const DetailPage = () => {
               isFilterOpen ? "" : "lg:w-full"
             } xl:w-full`}
           >
-            <CarGallery isLoading={isLoading} />
+            <CarGallery
+              isLoading={isLoading}
+              data={details.car_detail.views || []}
+            />
           </div>
 
           {/* car detail card */}
           <div className="w-full">
-            <CarDetailCart />
+            <CarDetailCart isLoading={isLoading} data={details.car_detail} />
           </div>
         </div>
 
@@ -41,7 +44,7 @@ const DetailPage = () => {
               title: "Recent Car",
               showViewAll: true,
             }}
-            data={dashboardData.recomendation_car}
+            data={details.recent_car}
             isLoading={isLoading}
             layout="scroll"
           />
@@ -54,7 +57,7 @@ const DetailPage = () => {
               title: "Recomendation Car",
               showViewAll: true,
             }}
-            data={dashboardData.recomendation_car}
+            data={details.recomendation_car}
             isLoading={isLoading}
             layout="scroll"
           />

@@ -15,7 +15,7 @@ const Header = () => {
         <div className="flex items-center h-full space-x-4">
           {/* List Button(if mobile) */}
           {isLoading ? (
-            <div className="flex w-7 h-7 sm:w-11 sm:h-11 rounded-full border border-devider items-center justify-center">
+            <div className=" sm:hidden flex w-7 h-7 sm:w-11 sm:h-11 rounded-full border border-devider items-center justify-center">
               <div className="animate-pulse opacity-100">
                 <img
                   src="/assets/skeleton/list.svg"

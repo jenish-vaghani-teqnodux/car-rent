@@ -1,6 +1,7 @@
 "use client";
 import CarCartSkeleton from "@/components/shared/CarCartSkeleton";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const CarCart: React.FC<ICarCartProps> = ({
@@ -18,10 +19,15 @@ const CarCart: React.FC<ICarCartProps> = ({
   isLoading,
   varient = "compact",
 }) => {
+  const router = useRouter();
   const [isLike, setIsLike] = useState(isLiked);
 
   const handleLikeFunction = () => {
     setIsLike(!isLike);
+  };
+
+  const handleClickRental = () => {
+    router.push(`/payment/${carId}`);
   };
 
   return (
@@ -124,7 +130,10 @@ const CarCart: React.FC<ICarCartProps> = ({
                 </p>
               )}
             </div>
-            <button className="btn-primary h-9 w-[100px] sm:h-11 sm:w-[116px]  text-[12px] sm:text-[16px] font-medium rounded-md cursor-pointer">
+            <button
+              className="btn-primary h-9 w-[100px] sm:h-11 sm:w-[116px]  text-[12px] sm:text-[16px] font-medium rounded-md cursor-pointer"
+              onClick={handleClickRental}
+            >
               Rental Now
             </button>
           </div>

@@ -33,7 +33,10 @@ interface carDetails {
   price: number;
   originalPrice?: number;
   flip: boolean;
-  views?: string[];
+  views: string[];
+  rating: number;
+  totalReviewer: string;
+  description: string;
 }
 
 interface IDashboardData {
@@ -57,6 +60,7 @@ interface IDashboardData {
 }
 
 interface IDetails {
+  car_detail: carDetails;
   reviews: {
     id: string;
     name: string;
@@ -66,4 +70,6 @@ interface IDetails {
     rating: number;
     reviewText: string;
   }[];
+  recent_car: carDetails[];
+  recomendation_car: carDetails[];
 }

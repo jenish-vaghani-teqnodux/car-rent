@@ -29,7 +29,11 @@ const CarCollection: React.FC<ICarCollectionProps> = ({
         )}
 
         {showViewAll && (
-          <p className="text-[12px] sm:text-lg font-semibold text-primary cursor-pointer">
+          <p
+            className={`text-[12px] sm:text-lg font-semibold text-primary ${
+              isLoading ? "" : "cursor-pointer"
+            }`}
+          >
             View All
           </p>
         )}

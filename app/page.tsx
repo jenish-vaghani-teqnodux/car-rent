@@ -47,7 +47,6 @@ export default function Home() {
                   key={slot.id}
                   title={slot.title}
                   description={slot.content}
-                  className=""
                   isLoading={isLoading}
                   image_url={slot.image_url}
                   showButton={true}
@@ -58,7 +57,6 @@ export default function Home() {
                   key={slot.id}
                   title={slot.title}
                   description={slot.content}
-                  className=""
                   isLoading={isLoading}
                   image_url={slot.image_url}
                   flip={slot.flip}

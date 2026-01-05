@@ -1,31 +1,22 @@
 import SlotBanner2 from "@/app/SlotBanner2";
-import React from "react";
+import React, { useState } from "react";
 
-const demoDetail = {
-  slotId: "f6b2b828-a5c8-4925-8a7a-065aff9535c6",
-  title: "Sports car with the best design and acceleration",
-  description:
-    "Safety and comfort while driving a futuristic and elegant sports car",
-  isLoading: false,
-  image_url: "/temp/nissan_gt_r.png",
-  flip: true,
-  showButton: false,
-};
+const CarGallery: React.FC<ICarGalleryProps> = ({ isLoading, data }) => {
+  const [selectedImage, setSelectedImage] = useState(data[0]);
 
-const views = [
-  "/images/f6b2b828-a5c8-4925-8a7a-065aff9535c6-view-1.png",
-  "/images/f6b2b828-a5c8-4925-8a7a-065aff9535c6-view-2.png",
-  "/images/f6b2b828-a5c8-4925-8a7a-065aff9535c6-view-3.png",
-];
-
-const CarGallery: React.FC<ICarGalleryProps> = ({ isLoading }) => {
   return (
     <>
       {/* Main Banner */}
-      <SlotBanner2 {...demoDetail} isLoading={isLoading} />
+      <div className="flex w-full h-[232px] sm:h-[360px] justify-center items-center rounded-xl overflow-hidden">
+        <img
+          src={selectedImage}
+          alt="Selected Car View"
+          className="w-full h-full"
+        />
+      </div>
 
       {/* Thumbnails */}
-      <div className="flex gap-5 pt-4 overflow-x-auto pb-4">
+      <div className="flex gap-5 pt-4 overflow-x-auto pb-4 pl-2">
         {isLoading
           ? Array.from({ length: 3 }).map((_, index) => (
               <div
@@ -39,10 +30,13 @@ const CarGallery: React.FC<ICarGalleryProps> = ({ isLoading }) => {
                 />
               </div>
             ))
-          : views.map((item, index) => (
+          : data.map((item, index) => (
               <div
                 key={index}
-                className="shrink-0 w-24 h-16 sm:w-[148px] sm:h-[124px] rounded-lg flex items-center justify-center"
+                className={`cursor-pointer shrink-0 w-24 h-16 sm:w-[148px] sm:h-[124px] rounded-lg overflow-hidden ${
+                  selectedImage === item ? "ring-3 ring-[#3563E9] p-1.5" : ""
+                }`}
+                onClick={() => setSelectedImage(item)}
               >
                 <img
                   src={item || "/images/no-image-available.png"}
