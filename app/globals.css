@@ -56,3 +56,7 @@
 .border-devider {
   border-color: var(--border-devider);
 }
+
+select option {
+  cursor: pointer;
+}
