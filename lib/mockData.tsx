@@ -675,3 +675,13 @@ export const details: IDetails = {
     },
   ],
 };
+
+export const paymentApi: IPaymentApi = {
+  image_url: "/images/f6b2b828-a5c8-4925-8a7a-065aff9535c6-view-1.png",
+  carName: "Nissan GT - R",
+  rating: 4,
+  totalReviewer: "440+",
+  subTotal: 80,
+  tax: 0,
+  total: 80,
+};

@@ -6,3 +6,8 @@ interface ILineSkeletonProps {
 interface ICartSkeletonProps {
   varient?: "compact" | "detailed";
 }
+
+interface IPaymentCartSkeletonProps {
+  currentStep: number;
+  totalSteps: number;
+}

@@ -73,3 +73,13 @@ interface IDetails {
   recent_car: carDetails[];
   recomendation_car: carDetails[];
 }
+
+interface IPaymentApi {
+  image_url: string;
+  carName: string;
+  rating: number;
+  totalReviewer: string;
+  subTotal: number;
+  tax: 0;
+  total: number;
+}

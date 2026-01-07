@@ -67,16 +67,21 @@ const FilterSidebar: React.FC<IFilterSidebarProps> = ({ isLoading }) => {
                 {getData.categoryTypes.map((item) => (
                   <label
                     key={item.value}
-                    className="flex items-center gap-1.5 cursor-pointer select-none"
+                    className="flex items-center select-none"
                   >
-                    <CheckBox className="w-5 h-5" />
-
-                    <span className="text-[16px] font-semibold text-body">
-                      {item.label}
-                    </span>
-                    <span className="text-[16px] font-semibold text-muted">
-                      ({item.count})
-                    </span>
+                    <CheckBox
+                      className="w-5 h-5"
+                      label={
+                        <div className="pl-4 space-x-2">
+                          <span className="text-[16px] font-semibold text-body">
+                            {item.label}
+                          </span>
+                          <span className="text-[16px] font-semibold text-muted">
+                            ({item.count})
+                          </span>
+                        </div>
+                      }
+                    />
                   </label>
                 ))}
               </div>
@@ -89,16 +94,21 @@ const FilterSidebar: React.FC<IFilterSidebarProps> = ({ isLoading }) => {
                 {getData.carCapacityOptions.map((item) => (
                   <label
                     key={item.value}
-                    className="flex items-center gap-1.5 cursor-pointer select-none"
+                    className="flex items-center select-none"
                   >
-                    <CheckBox className="w-5 h-5" />
-
-                    <span className="text-[16px] font-semibold text-body">
-                      {item.label}
-                    </span>
-                    <span className="text-[16px] font-semibold text-muted">
-                      ({item.count})
-                    </span>
+                    <CheckBox
+                      className="w-5 h-5"
+                      label={
+                        <div className="pl-4 space-x-2">
+                          <span className="text-[16px] font-semibold text-body">
+                            {item.label}
+                          </span>
+                          <span className="text-[16px] font-semibold text-muted">
+                            ({item.count})
+                          </span>
+                        </div>
+                      }
+                    />
                   </label>
                 ))}
               </div>
