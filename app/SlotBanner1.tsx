@@ -1,7 +1,9 @@
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const SlotBanner1: React.FC<ISlotBannerProps> = ({
   slotId,
+  carId,
   title,
   description,
   className = "",
@@ -10,7 +12,11 @@ const SlotBanner1: React.FC<ISlotBannerProps> = ({
   flip,
   showButton = false,
 }) => {
-  const handleClickRental = () => {};
+  const router = useRouter();
+
+  const handleClickRental = () => {
+    router.push(`payment/${carId}`);
+  };
   return (
     <>
       {isLoading ? (

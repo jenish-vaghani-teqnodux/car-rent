@@ -1,5 +1,8 @@
+import { useRouter } from "next/navigation";
+
 const SlotBanner2: React.FC<ISlotBannerProps> = ({
   slotId,
+  carId,
   title,
   description,
   className = "",
@@ -8,6 +11,11 @@ const SlotBanner2: React.FC<ISlotBannerProps> = ({
   flip,
   showButton = false,
 }) => {
+  const router = useRouter();
+
+  const handleClickRental = () => {
+    router.push(`payment/${carId}`);
+  };
   return (
     <>
       {isLoading ? (
@@ -49,7 +57,10 @@ const SlotBanner2: React.FC<ISlotBannerProps> = ({
             </span>
 
             {showButton && (
-              <button className="h-11 w-[120px] bg-[#54A6FF] hover:bg-[#3F8FE0] text-white size-[18px] font-medium rounded-md cursor-pointer mt-4">
+              <button
+                className="h-11 w-[120px] bg-[#54A6FF] hover:bg-[#3F8FE0] text-white size-[18px] font-medium rounded-md cursor-pointer mt-4"
+                onClick={handleClickRental}
+              >
                 Rental Car
               </button>
             )}

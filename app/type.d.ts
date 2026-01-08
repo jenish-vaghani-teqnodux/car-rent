@@ -7,4 +7,5 @@ interface ISlotBannerProps {
   flip?: boolean;
   slotId: string;
   showButton?: boolean;
+  carId: string;
 }

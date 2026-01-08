@@ -15,6 +15,7 @@ interface IGetData {
 
 interface slots {
   id: string;
+  carId: string;
   title: string;
   content: string;
   image_url: string;

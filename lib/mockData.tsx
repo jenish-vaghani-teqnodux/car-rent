@@ -65,12 +65,11 @@ export const getData: IGetData = {
   ],
 };
 
-// Dashboard API returns only essential fields.
-//All car data is stored centrally and selectively exposed per API for optimized performance.
 export const dashboardData: IDashboardData = {
   slots: [
     {
       id: "44bb5a87-8e1b-4acd-8f1c-55d6a0b94626",
+      carId: "895aa651-0bf7-40f1-8f93-a11c7309dd9b",
       title: "The Best Platform for Car Rental",
       content:
         "Ease of doing a car rental safely and reliably. Of course at a low price.",
@@ -79,6 +78,7 @@ export const dashboardData: IDashboardData = {
     },
     {
       id: "c3e656a0-239c-46a1-ab15-c13ce5e191e3",
+      carId: "f6b2b828-a5c8-4925-8a7a-065aff9535c6",
       title: "Easy way to rent a car at a low price",
       content:
         "Providing cheap car rental services and safe and comfortable facilities.",

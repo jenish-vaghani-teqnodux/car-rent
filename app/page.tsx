@@ -44,6 +44,7 @@ export default function Home() {
               slot.id === "44bb5a87-8e1b-4acd-8f1c-55d6a0b94626" ? (
                 <SlotBanner1
                   slotId={slot.id}
+                  carId={slot.carId}
                   key={slot.id}
                   title={slot.title}
                   description={slot.content}
@@ -54,6 +55,7 @@ export default function Home() {
               ) : (
                 <SlotBanner2
                   slotId={slot.id}
+                  carId={slot.carId}
                   key={slot.id}
                   title={slot.title}
                   description={slot.content}
