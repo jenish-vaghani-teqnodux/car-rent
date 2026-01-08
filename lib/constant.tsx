@@ -48,7 +48,7 @@ export const timeOptions = [
   { name: "01:00 AM", value: "01:00" },
   { name: "01:30 AM", value: "01:30" },
   { name: "02:00 AM", value: "02:00" },
-  { name: "02:30 AM", value: "02:30" },
+  { name: "02:30 AM", value: "02:30" }, 
   { name: "03:00 AM", value: "03:00" },
   { name: "03:30 AM", value: "03:30" },
   { name: "04:00 AM", value: "04:00" },
