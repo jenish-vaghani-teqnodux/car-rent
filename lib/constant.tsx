@@ -6,34 +6,20 @@ export const aboutLinks = [
 ];
 
 export const communityLinks = [
-<<<<<<< HEAD
   { name: "Events", url: "#" }, 
   { name: "Blog", url: "#" },
   { name: "Podcast", url: "#" }, 
-=======
-  { name: "Events", url: "#" },
-  { name: "Blog", url: "#" },
-  { name: "Podcast", url: "#" },
->>>>>>> 28aeddcca93474a1c36526ff89a9131a484477f9
   { name: "Invite a friend", url: "#" },
 ];
 
 export const socialLinks = [
   { name: "Discord", url: "#" },
   { name: "Instagram", url: "#" },
-<<<<<<< HEAD
   { name: "Twitter", url: "#" },  
   { name: "Facebook", url: "#" },
 ];
 
 export const cityOptions = [ 
-=======
-  { name: "Twitter", url: "#" },
-  { name: "Facebook", url: "#" },
-];
-
-export const cityOptions = [
->>>>>>> 28aeddcca93474a1c36526ff89a9131a484477f9
   // Gujarat
   { name: "Ahmedabad", value: "ahmedabad" },
   { name: "Surat", value: "surat" },
@@ -62,11 +48,7 @@ export const timeOptions = [
   { name: "01:00 AM", value: "01:00" },
   { name: "01:30 AM", value: "01:30" },
   { name: "02:00 AM", value: "02:00" },
-<<<<<<< HEAD
   { name: "02:30 AM", value: "02:30" }, 
-=======
-  { name: "02:30 AM", value: "02:30" },
->>>>>>> 28aeddcca93474a1c36526ff89a9131a484477f9
   { name: "03:00 AM", value: "03:00" },
   { name: "03:30 AM", value: "03:30" },
   { name: "04:00 AM", value: "04:00" },
