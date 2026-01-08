@@ -1,5 +1,4 @@
 import RatingStar from "@/components/ui/rating/RatingStar";
-import { useState } from "react";
 
 const Reviews = ({
   name,
@@ -9,7 +8,6 @@ const Reviews = ({
   rating,
   reviewText,
 }: Reviews) => {
-  const [newRating, setNewRating] = useState<number | null>(rating);
   return (
     <>
       <div className="flex gap-4">
@@ -29,10 +27,7 @@ const Reviews = ({
             <span className="text-muted font-medium text-[12px] sm:text-[14px]">
               {role}
             </span>
-            <RatingStar
-              value={newRating}
-              onChange={(event, newValue) => setNewRating(newValue)}
-            />
+            <RatingStar value={rating} readOnly />
           </div>
           <div className="mt-2 pr-4">
             <span className="text-[12px] sm:text-[14px] text-secondary line-clamp-3">

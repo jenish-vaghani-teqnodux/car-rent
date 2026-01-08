@@ -7,7 +7,6 @@ const CarDetailCart: React.FC<ICarDetailCartProps> = ({ isLoading, data }) => {
   const router = useRouter();
 
   const [isLike, setIsLike] = useState(data.user_liked);
-  const [newRating, setNewRating] = useState<number | null>(data.rating);
 
   const handleLikeFunction = () => {
     setIsLike(!isLike);
@@ -36,11 +35,7 @@ const CarDetailCart: React.FC<ICarDetailCartProps> = ({ isLoading, data }) => {
                 />
               </div>
               <div className="flex items-center gap-2">
-                <RatingStar
-                  size="small"
-                  value={newRating}
-                  onChange={(event, newValue) => setNewRating(newValue)}
-                />
+                <RatingStar size="small" value={data.rating} readOnly />
                 <span className="text-sm text-secondary">
                   {data.totalReviewer} Reviewer
                 </span>
