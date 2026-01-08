@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #3563E9;
+  --primary-hover: #274BC4;
+  --text-muted: #90A3BF;
+  --bg-card: #FFFFFF;
+  --bg-page: #F6F7F9;
+  --border-devider: #C3D4E9;
+  --text-heading: #1A202C;
+  --text-body: #13131399;
+  --text-secondary: #596780;
+}
+
+/* Text styles */
+.text-primary {
+  color: var(--primary);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.text-heading {
+  color: var(--text-heading);
+}
+.text-body {
+  color: var(--text-body);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Date picker styles */
+.MuiPickersSectionList-root {
+  width: 100% !important;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Background color */
+.bg-page {
+  background-color: var(--bg-page);
+}
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+/* Border color */
+.border-devider {
+  border-color: var(--border-devider);
+}
+
+select option {
+  cursor: pointer;
+}

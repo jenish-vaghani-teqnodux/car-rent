@@ -1,0 +1,3 @@
+interface IFilterSidebarProps {
+  isLoading?: boolean;
+}
